@@ -15,18 +15,18 @@ app.set("views", viewPath);
 app.use(express.static(joinedPath));
 app.get("", (req, res) => {
   res.render("index", {
-    title: "akhil",
-    name: "ahaaaaaaaa",
+    title: "Weather",
+    name: "Report",
   });
 });
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "okmanmns",
+    title: "about",
   });
 });
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "good help",
+    title: "Needed help",
   });
 });
 app.get("/help/*", (req, res) => {
