@@ -2,6 +2,7 @@ const path = require("path");
 const hbs = require("hbs");
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 3000;
 const geocode = require("./utils/geocode.js");
 const forecast = require("./utils/forecast.js");
 const joinedPath = path.join(__dirname, "../public");
@@ -73,6 +74,6 @@ app.get("*", (req, res) => {
     errorMessage: "not found baba",
   });
 });
-app.listen(3000, () => {
-  console.log("running baba");
+app.listen(port, () => {
+  console.log("running baba at " + port);
 });
